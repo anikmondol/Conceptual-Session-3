@@ -1,34 +1,36 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Courier New', Courier, monospace;
 }
 
 
-.upper-footer{
+.upper-footer {
     display: flex;
     justify-content: space-evenly;
     background-color: black;
     color: white;
-    height: 300px;
+    /* height: 300px; */
     align-items: center;
+    /* flex-wrap: wrap; */
+
 }
 
-.upper-footer>div .awesome{
+.upper-footer>div .awesome {
     font-size: 25px;
     display: flex;
     gap: 25px;
     margin-top: 10px;
-   
+
 }
 
 
-.upper-footer > div{
+.upper-footer>div {
     width: 20%;
-    
+    flex-basis: 200px;
 }
 
-.news-input{
+.news-input {
     display: block;
     height: 30px;
     width: 80%;
@@ -38,7 +40,7 @@
     border-radius: 5px;
 }
 
-.news-submit{
+.news-submit {
     display: block;
     height: 30px;
     width: 80%;
@@ -48,17 +50,78 @@
     border-radius: 5px;
 }
 
-.lower-footer{
+.lower-footer {
     display: flex;
     justify-content: space-between;
     padding: 0 25px;
     background-color: antiquewhite;
     height: 60px;
     align-items: center;
+    /* flex-wrap: wrap; */
 
 
 }
 
-.lower-footer a{
+.lower-footer a {
     text-decoration: none;
+    margin-left: 5px;
+}
+
+/* responsive */
+
+@media screen and (max-width: 576px) {
+    .upper-footer {
+        flex-direction: column;
+        height: 100%;
+        padding: 50px 0;
+
+    }
+
+    .lower-footer {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    .upper-footer>div {
+        width: 100%;
+        text-align: center;
+    }
+    .upper-footer>div .awesome {
+        width: 100%;
+        padding: 0 30%;
+    }
+    .news-submit, .news-input {
+        margin: 0 10%;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 576px){
+    .upper-footer{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .upper-footer{
+        flex-direction: column;
+        padding-bottom: 20px;
+    }
+    .mde{
+        padding-bottom: 20px;
+    }
+    .lower-footer {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .upper-footer>div {
+        width: 100%;
+        text-align: center;
+    }
+    .upper-footer>div .awesome {
+        width: 100%;
+        padding: 0 30%;
+    }
+    .news-submit, .news-input {
+        margin: 0 10%;
+        margin-bottom: 30px;
+    }
 }
