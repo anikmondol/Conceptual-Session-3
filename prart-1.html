@@ -4,8 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* .container{
+            border: 2px solid rebeccapurple;
+            height: 200px;
+            background-color: red; 
+            margin-left: 200px;
+            width: 100%;
+            width: max-content;
+            width: fit-content; 
+            width: min-content;
+            max-width: 100%; 
+        }  */
+        
+        /* .img{
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        } */
+        .container{
+          background-color: red; 
+          height: 400px;
+        }
+
+        
+        @media screen and (max-width: 1000px){
+            .container{
+                background-color: rgb(11, 0, 128);
+            }
+        }
+        @media screen and (max-width: 500px){
+            .container{
+                background-color: green;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+
+    </div>
 </body>
 </html>
